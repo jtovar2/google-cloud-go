@@ -13,3 +13,5 @@ require (
 	google.golang.org/genproto v0.0.0-20210604141403-392c879c8b08
 	google.golang.org/grpc v1.38.0
 )
+replace google.golang.org/genproto => github.com/jtovar2/go-genproto v0.0.0-20210607155455-bcf5e71bd00d
+
