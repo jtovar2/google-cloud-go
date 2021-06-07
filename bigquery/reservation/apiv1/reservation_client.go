@@ -724,8 +724,7 @@ func (c *gRPCClient) CreateCapacityCommitment(ctx context.Context, req *reservat
 		ctx = cctx
 	}
 //	md := metadata.Pairs("x-goog-request-params", fmt.Sprintf("%s=%v", "parent", url.QueryEscape(req.GetParent())))
-	md := metadata.Pairs("x-goog-request-params", fmt.Sprintf("%s=%v&%s=%v", "parent", url.QueryEscape(req.GetParent()), "capacity_commitment_id", url.QueryEscape(req.GetCapacityCommitmentId())
-								 ))
+	md := metadata.Pairs("x-goog-request-params", fmt.Sprintf("%s=%v&%s=%v", "parent", url.QueryEscape(req.GetParent()), "capacity_commitment_id", url.QueryEscape(req.GetCapacityCommitmentId()) ))
 
 	ctx = insertMetadata(ctx, c.xGoogMetadata, md)
 	opts = append((*c.CallOptions).CreateCapacityCommitment[0:len((*c.CallOptions).CreateCapacityCommitment):len((*c.CallOptions).CreateCapacityCommitment)], opts...)
